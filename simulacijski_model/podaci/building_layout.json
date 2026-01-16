@@ -1,0 +1,326 @@
+{
+  "building": {
+    "id": "zgrada_na_dva_kata",
+    "floors": 2,
+    "cell_size_meters": 1.0
+  },
+
+  "people":{
+    "speed":{
+      "min": 0.5,
+      "max": 1.0
+    }
+  },
+
+  "floors": [
+    {
+      "floor_id": 0,
+      "name": "prizemlje",
+      "dimensions": { "width": 20, "height": 25 },
+
+      "exits": [
+        {
+          "id": "Glavni_izlaz",
+          "position": { "x": 9, "y": 1 },
+          "width": 3,
+          "capacity": 4
+        },
+        {
+          "id": "Sporedni_izlaz_lijevo",
+          "position": {"x":0, "y":15},
+          "width": 2,
+          "capacity": 2
+        },
+        {
+          "id": "Sporedni_izlaz_desno",
+          "position": {"x":19, "y":17},
+          "width": 2,
+          "capacity": 2
+        }
+      ],
+
+      "stairs": [
+        {
+          "id": "stepenice",
+          "position": { "x": 10, "y": 15 },
+          "width": 2,
+          "connects_to_floor": 1
+        }
+      ],
+
+      "rooms": [
+        {
+          "id": "ured_lijevo_veliki",
+          "type": "open_space",
+          "bounds": { "x": 0, "y": 1, "width": 8, "height": 12 },
+          "max_occupancy": 20,
+          "doors": [
+            {"x": 7, "y": 7}
+          ]
+        },
+        {
+          "id": "ured_desno_veliki",
+          "type": "open_space",
+          "bounds": { "x": 12, "y": 1, "width": 8, "height": 12 },
+          "max_occupancy": 19,
+          "doors": [
+            {"x": 12, "y": 5}
+          ]
+        },
+        {
+          "id": "tehnicka_soba",
+          "type": "office",
+          "bounds": { "x": 0, "y": 18, "width": 6, "height": 6 },
+          "max_occupancy": 5,
+          "doors": [
+            {"x": 3, "y": 18}
+          ]
+        },
+        {
+          "id": "racunovodstvo",
+          "type": "office",
+          "bounds": { "x": 6, "y": 18, "width": 7, "height": 6 },
+          "max_occupancy": 7,
+          "doors": [
+            {"x": 7, "y": 18}
+          ]
+        },
+        {
+          "id": "soba_za_sastanke",
+          "type": "meeting",
+          "bounds": { "x": 13, "y": 18, "width": 7, "height": 6 },
+          "max_occupancy": 10,
+          "doors": [
+            {"x": 14, "y": 18}
+          ]
+        },
+        {
+          "id": "wc",
+          "type": "sanitary",
+          "bounds": { "x": 15, "y": 13, "width": 5, "height": 3 },
+          "max_occupancy": 2,
+          "doors": [
+            {"x": 15, "y": 14}
+          ]
+        }
+      ],
+
+      "corridors": [
+        {
+          "id": "hodnik1",
+          "path": [
+            { "x": 10, "y": 15 },
+            { "x": 9, "y": 14 }
+          ],
+          "width": 3
+        },
+        {
+          "id": "hodnik2",
+          "path": [
+            { "x": 10, "y": 6 }
+          ],
+          "width": 3
+        }
+      ]
+    },
+
+    {
+      "floor_id": 1,
+      "name": "prvi_kat",
+      "dimensions": { "width": 20, "height": 25 },
+
+      "exits":[
+        {
+          "id": "Izlaz_u_slucaju_opasnosti_1kat",
+          "position": {"x": 0, "y": 12},
+          "width": 2,
+          "capacity": 2
+        }
+      ],
+
+      "stairs": [
+        {
+          "id": "stepenice",
+          "position": { "x": 10, "y": 15 },
+          "width": 2,
+          "connects_to_floor": 0
+        }
+      ],
+
+      "rooms": [
+        {
+          "id": "ured_lijevo_veliki_prvikat",
+          "type": "open_space",
+          "bounds": { "x": 0, "y": 14, "width": 7, "height": 10 },
+          "max_occupancy": 14,
+          "doors": [
+            {"x": 6, "y": 17}
+          ]
+        },
+        {
+          "id": "ured_desno_veliki_prvikat",
+          "type": "open_space",
+          "bounds": { "x": 12, "y": 1, "width": 8, "height": 12 },
+          "max_occupancy": 24,
+          "doors": [
+            {"x": 12, "y": 8}
+          ]
+        },
+        {
+          "id": "knjigovodstvo",
+          "type": "office",
+          "bounds": { "x": 0, "y": 1, "width": 7, "height": 7 },
+          "max_occupancy": 8,
+          "doors": [
+            {"x": 6, "y": 4}
+          ]
+        },
+        {
+          "id": "direktor_ured",
+          "type": "office",
+          "bounds": { "x": 7, "y": 18, "width": 7, "height": 6 },
+          "max_occupancy": 6,
+          "doors": [
+            {"x": 11, "y": 18}
+          ]
+        },
+        {
+          "id": "prodaja",
+          "type": "office",
+          "bounds": { "x": 14, "y": 18, "width": 6, "height": 6 },
+          "max_occupancy": 4,
+          "doors": [
+            {"x": 15, "y": 18}
+          ]
+        },
+        {
+          "id": "wc1_prvikat",
+          "type": "sanitary",
+          "bounds": { "x": 16, "y": 13, "width": 4, "height": 4 },
+          "max_occupancy": 3,
+          "doors": [
+            {"x": 16, "y": 15}
+          ]
+        },
+        {
+          "id": "wc2_prvikat",
+          "type": "sanitary",
+          "bounds": { "x": 0, "y": 8, "width": 4, "height": 4 },
+          "max_occupancy": 3,
+          "doors": [
+            {"x": 3, "y": 10}
+          ]
+        }
+      ],
+
+      "corridors": [
+        {
+          "id": "hodnik1_prvikat",
+          "path": [
+            { "x": 9, "y": 10 },
+            { "x": 9, "y": 12 },
+            { "x": 9, "y": 3}
+          ],
+          "width": 4
+        }
+      ]
+    }
+  ],
+
+  "hazards": {
+    "fire_sources": [
+      {
+        "id": "pozar1",
+        "floor": 0,
+        "position": { "x": 4, "y": 20 },
+        "growth_rate": 0.2,
+        "smoke_rate": 0.2
+      }
+    ],
+
+
+    "random_fire_sources": {
+      "enabled": true,
+      "count": 1,
+      "allowed_floors": [0, 1],
+      "growth_rate_range": [0.1, 0.4],
+      "smoke_rate_range": [0.1, 0.3]
+    }
+},
+
+  "alarms": [
+    {
+      "floor": 0,
+      "x": 10,
+      "y": 12
+    },
+    {
+      "floor": 1,
+      "x": 10,
+      "y": 12
+    }
+  ],
+
+    "ventilation": [
+      {
+        "floor" : 0,
+        "x": 9,
+        "y": 8
+      },
+      {
+        "floor": 0,
+        "x": 14,
+        "y": 8
+      },
+      {
+        "floor" : 0,
+        "x": 5,
+        "y": 10
+      },
+      {
+        "floor" : 0,
+        "x": 16,
+        "y": 14
+      },
+      {
+        "floor" : 0,
+        "x": 9,
+        "y": 15
+      },
+      {
+        "floor" : 0,
+        "x": 3,
+        "y": 15
+      },
+      {
+        "floor" : 1,
+        "x": 8,
+        "y": 5
+      },
+      {
+        "floor" : 1,
+        "x": 4,
+        "y": 15
+      },
+      {
+        "floor" : 1,
+        "x": 1,
+        "y": 9
+      },
+      {
+        "floor" : 1,
+        "x": 15,
+        "y": 7
+      },
+      {
+        "floor" : 1,
+        "x": 17,
+        "y": 14
+      },
+      {
+        "floor" : 1,
+        "x": 8,
+        "y": 14
+      }
+    ]
+}
